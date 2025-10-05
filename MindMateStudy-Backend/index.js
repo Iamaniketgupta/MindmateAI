@@ -31,7 +31,7 @@ const httpServer = createServer(app);
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [process.env.CLIENT_URL,"http://localhost:5173"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
@@ -40,7 +40,7 @@ app.use(
 const io = new Server(httpServer, {
   connectionStateRecovery: {},
   cors: {
-    origin: process.env.CLIENT_URL || "https://gappe.vercel.app",
+    origin: process.env.CLIENT_URL,
   },
   pingTimeout: 60000,
 });
