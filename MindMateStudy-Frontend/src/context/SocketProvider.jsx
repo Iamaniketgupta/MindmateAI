@@ -9,9 +9,8 @@ export const SocketProvider = ({ children }) => {
   const currUser = useSelector((state) => state.user);
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
-    // const newSocket = io('https://gappe.onrender.com');
-    setSocket(newSocket);
+    const newSocket = io("https://mindmate-ai-upr2.vercel.app/api");
+     setSocket(newSocket);
 
     if (!newSocket) return;
     if (currUser) {

@@ -172,10 +172,10 @@ const Register = () => {
           <div className="flex-1 h-[1px] bg-gray-400" />
         </div>
 
-        {
+        {/* {
           asUserRegister && 
         <GoogleBox setIsLoading={setLoading} />
-        }
+        } */}
       </div>
     </div>
   );
