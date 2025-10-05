@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { createServer } from "http";
@@ -22,8 +22,7 @@ import dashboardRouter from "./routes/dashboard.route.js"
 
 const app = express();
 
-dotenv.config(); // Load environment variables
-
+ 
 const PORT = process.env.PORT || 5000;
 
 const httpServer = createServer(app);
